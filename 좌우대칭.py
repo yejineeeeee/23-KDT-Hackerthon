@@ -73,3 +73,25 @@ plt.boxplot(data)
 plt.title('데이터 분포 Box Plot')
 plt.ylabel('값')
 plt.show()
+
+# Q1, Q3 계산
+Q1 = np.percentile(data, 25)
+Q3 = np.percentile(data, 75)
+
+# IQR 계산
+IQR = Q3 - Q1
+
+# 이상치 경계 계산
+lower_bound = Q1 - 1.5 * IQR
+upper_bound = Q3 + 1.5 * IQR
+
+# 이상치 식별
+outliers = [x for x in data if x < lower_bound or x > upper_bound]
+
+# 이상치를 벗어난 데이터 수 계산
+outliers_count = len(outliers)
+
+print("이상치 경계 (하단):", lower_bound)
+print("이상치 경계 (상단):", upper_bound)
+print("총 데이터 수", len(data))
+print("이상치를 벗어난 데이터 수:", outliers_count)
