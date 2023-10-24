@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import cv2
 
 ## 1. 필요한 파일 불러오기
-path = 'C:/Users/user/Documents/GitHub/23-KDT-Hackerthon/yolov8_ubuntu/house'
+path = 'C:/Users/user/Desktop/GitHub/23-KDT-Hackerthon/yolov8_ubuntu/house'
 yaml_path = path + '/house.yaml'
 with open(yaml_path, 'r', encoding='utf-8') as file:
     yaml_data = yaml.safe_load(file)

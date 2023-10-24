@@ -4,8 +4,8 @@ import cv2
 import numpy as np
 
 ## 최외각선만 뽑기
-def draw_edge(target):
-    folder_path = 'C:/Users/user/Documents/GitHub/23-KDT-Hackerthon/yolov8_ubuntu/house/FeatureExtraction/cropped/' + target
+def draw_contour(target):
+    folder_path = 'C:/Users/user/Desktop/GitHub/23-KDT-Hackerthon/yolov8_ubuntu/house/FeatureExtraction/cropped/' + target
     image_file_names = [f for f in os.listdir(folder_path) if os.path.isfile(os.path.join(folder_path, f)) and f.endswith('.jpg')]
     
     # edge_folder_path = folder_path + '/edges'
@@ -61,4 +61,4 @@ def draw_edge(target):
     return
 
 target = '창문'
-draw_edge(target)
+draw_contour(target)
