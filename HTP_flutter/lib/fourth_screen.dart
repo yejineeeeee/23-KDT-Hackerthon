@@ -6,6 +6,7 @@ class FourthScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        debugShowCheckedModeBanner: false,
         home: Scaffold(
             appBar: AppBar(
               backgroundColor: Color(0xFF7B95C0),
