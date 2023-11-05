@@ -12,11 +12,11 @@ with open(yaml_path, 'r', encoding='utf-8') as file:
     yaml_data = yaml.safe_load(file)
 # print(yaml_data)
 
-label_folder = path + '/House_valid/labels'
+label_folder = 'C:/Users/user/Desktop/House_valid/labels'
 label_fnames = [f for f in os.listdir(label_folder) if os.path.isfile(os.path.join(label_folder, f)) and f.endswith('.txt')]
 # print(label_fnames[:5])
 
-image_folder = path + '/House_valid/images'
+image_folder = 'C:/Users/user/Desktop/House_valid/images'
 image_fnames = [f for f in os.listdir(image_folder) if os.path.isfile(os.path.join(image_folder, f)) and f.endswith('.jpg')]
 # print(image_fnames[:5])
 
@@ -119,7 +119,7 @@ def crop_and_save(img_path, txt_content, class_names, target, font_path='path_to
         
     return
         
-target = '창문'
+target = '길'
 for image_fname, label_fname in zip(image_fnames, label_fnames):
     print(image_fname)
     img_path = image_folder+'/'+image_fname

@@ -5,9 +5,10 @@ import nltk
 nltk.download('punkt')
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 
-df = pd.read_csv("C:/Users/user/Desktop/house.csv")
-df.columns = ['exp', 'analysis']
-combined_string = '\n'.join(df['analysis'].astype(str))
+df = pd.read_csv("C:/Users/user/Desktop/house2.csv", encoding='cp949')
+# df.columns = ['exp', 'analysis']
+# combined_string = '\n'.join(df['analysis'].astype(str))
+combined_string = '\n'.join(df.astype(str))
 ARTICLE = f'"""\n{combined_string}"""'
 
 model = AutoModelForSeq2SeqLM.from_pretrained('eenzeenee/t5-base-korean-summarization')
